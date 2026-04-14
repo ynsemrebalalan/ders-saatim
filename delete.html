@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hesap Silme — Ders Saatim</title>
+  <meta name="description" content="Ders Saatim hesabını ve verilerini silme talimatları.">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #1a1a1a;
+      --text: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #ffb300;
+      --danger: #ff3b30;
+      --border: #2a2a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    header {
+      text-align: center;
+      padding: 32px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 16px;
+      color: var(--text);
+      margin-top: 20px;
+    }
+    p, li { color: var(--text); }
+    .method {
+      background: var(--card);
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin: 20px 0;
+      border-left: 4px solid var(--accent);
+    }
+    .method.email {
+      border-left-color: #1AA6FF;
+    }
+    .step {
+      background: rgba(255, 179, 0, 0.08);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 10px 0;
+    }
+    .step strong {
+      color: var(--accent);
+    }
+    ul { padding-left: 24px; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .email-button {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      margin: 16px 0 8px;
+      text-decoration: none;
+    }
+    .email-button:hover {
+      background: #ffc533;
+      text-decoration: none;
+    }
+    .warning {
+      background: rgba(255, 59, 48, 0.08);
+      border: 1px solid rgba(255, 59, 48, 0.3);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 20px 0;
+      color: #ff6b5f;
+      font-size: 14px;
+    }
+    .warning strong {
+      color: var(--danger);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--card);
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ders Saatim</h1>
+      <div class="subtitle">Hesap ve Veri Silme</div>
+      <div class="subtitle">Son güncelleme: 15 Nisan 2026</div>
+    </header>
+
+    <p>
+      Ders Saatim uygulamasındaki hesabınızı ve tüm kişisel verilerinizi silmek için
+      aşağıdaki iki yöntemden birini kullanabilirsiniz.
+    </p>
+
+    <h2>Yöntem 1 — Uygulama İçinden</h2>
+    <div class="method">
+      <p>
+        Uygulama yüklüyse ve giriş yaptıysanız, hesabınızdan çıkış yapmak için:
+      </p>
+      <div class="step">
+        <strong>1.</strong> Ana ekranda sağ üstte <strong>Ayarlar</strong> (⚙️) simgesine dokun.
+      </div>
+      <div class="step">
+        <strong>2.</strong> En üstteki <strong>Hesabım</strong> kartına dokun.
+      </div>
+      <div class="step">
+        <strong>3.</strong> En alttaki <strong>Çıkış yap</strong> butonuna bas.
+      </div>
+      <p style="margin-top: 16px; color: var(--muted); font-size: 13px;">
+        Not: Çıkış yapmak sadece oturumu kapatır. Hesabınızın ve bulut verilerinizin
+        <strong>tamamen silinmesi</strong> için lütfen aşağıdaki e-posta yöntemini kullanın.
+      </p>
+    </div>
+
+    <h2>Yöntem 2 — E-posta ile Silme Talebi</h2>
+    <div class="method email">
+      <p>
+        Uygulamayı kurmadan veya hesabınızın tüm sunucu verileriyle birlikte silinmesini
+        istiyorsanız, bize e-posta gönderin:
+      </p>
+      <a href="mailto:yunusemrebalalan@gmail.com?subject=Hesap%20Silme%20Talebi%20-%20Ders%20Saatim&body=Merhaba%2C%0A%0AD%C3%A9rs%20Saatim%20uygulamas%C4%B1ndaki%20hesab%C4%B1m%C4%B1%20ve%20t%C3%BCm%20ki%C5%9Fisel%20verilerimi%20silmek%20istiyorum.%0A%0AKay%C4%B1tl%C4%B1%20e-posta%20adresim%3A%20%5Bburaya%20e-postan%C4%B1z%5D%0A%0ATe%C5%9Fekk%C3%BCrler." class="email-button">
+        📧 Silme Talebi Gönder
+      </a>
+      <p style="color: var(--muted); font-size: 13px;">
+        Ya da doğrudan bu adrese yazın:
+        <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>
+      </p>
+      <p style="font-size: 14px;">
+        <strong style="color: var(--accent);">Konu başlığına</strong> şunu yazın:
+        <em>Hesap Silme Talebi - Ders Saatim</em>
+      </p>
+      <p style="font-size: 14px;">
+        <strong style="color: var(--accent);">Mesajda</strong> hesabınıza bağlı e-posta adresinizi belirtin.
+      </p>
+    </div>
+
+    <div class="warning">
+      <strong>⚠️ Dikkat:</strong> Hesap silme işlemi geri alınamaz. Silme talebiniz alındıktan
+      sonra hesabınıza bağlı <strong>tüm veriler kalıcı olarak silinir</strong>.
+    </div>
+
+    <h2>Silinecek Veriler</h2>
+    <p>Talebinizin işleme alınması durumunda <strong>30 gün içinde</strong> şu veriler silinir:</p>
+
+    <table>
+      <thead>
+        <tr><th>Veri</th><th>Nerede</th><th>Durum</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>E-posta adresi</strong></td>
+          <td>Supabase Auth</td>
+          <td>Tamamen silinir</td>
+        </tr>
+        <tr>
+          <td><strong>Profil (is_pro, purchased_at)</strong></td>
+          <td>Supabase profiles tablosu</td>
+          <td>Tamamen silinir</td>
+        </tr>
+        <tr>
+          <td><strong>Oluşturduğunuz çalışma odaları</strong></td>
+          <td>Supabase study_rooms</td>
+          <td>Kapatılır ve silinir</td>
+        </tr>
+        <tr>
+          <td><strong>Oda üyelikleri</strong></td>
+          <td>Supabase room_members</td>
+          <td>Tamamen silinir</td>
+        </tr>
+        <tr>
+          <td><strong>Çalışma oturumları, notlar, soru kayıtları, rozetler</strong></td>
+          <td>Cihazınız (yerel SQLite)</td>
+          <td>Uygulamayı kaldırınca telefonla birlikte silinir</td>
+        </tr>
+        <tr>
+          <td><strong>Tema tercihleri, ayarlar, motivasyon sözü geçmişi</strong></td>
+          <td>Cihazınız (SharedPreferences)</td>
+          <td>Uygulamayı kaldırınca telefonla birlikte silinir</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="color: var(--muted); font-size: 13px; margin-top: 16px;">
+      Ders Saatim hiçbir analiz, reklam veya üçüncü taraf izleme sistemi kullanmaz.
+      Yukarıda listelenenler dışında bizde kayıtlı başka bir veriniz bulunmaz.
+    </p>
+
+    <h2>Silme Süresi</h2>
+    <p>
+      Talep e-postanızı aldıktan sonra:
+    </p>
+    <ul>
+      <li><strong>7 gün içinde</strong> talebinize onay yanıtı gönderilir.</li>
+      <li><strong>30 gün içinde</strong> hesabınız ve bulut verileriniz kalıcı olarak silinir.</li>
+      <li><strong>30 günden sonra</strong> silme işleminin tamamlandığına dair bilgi e-postası gönderilir.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>English Summary</h2>
+    <p>
+      To delete your Ders Saatim account and associated data, please send an email to
+      <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>
+      with the subject <em>"Account Deletion Request"</em>. Include the email address linked
+      to your account. Your account and all server-side data will be permanently deleted
+      within 30 days. Local data (sessions, notes, settings) is removed when you uninstall
+      the app.
+    </p>
+
+    <footer>
+      © 2026 DavedDeva · Ders Saatim<br>
+      <a href="privacy.html">Gizlilik Politikası</a>
+    </footer>
+  </div>
+</body>
+</html>
