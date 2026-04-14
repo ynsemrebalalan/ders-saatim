@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası — Ders Saatim</title>
+  <meta name="description" content="Ders Saatim gizlilik politikası. Hiçbir kişisel veri toplanmaz, paylaşılmaz.">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #1a1a1a;
+      --text: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #ffb300;
+      --border: #2a2a2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    header {
+      text-align: center;
+      padding: 32px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 16px;
+      color: var(--text);
+      margin-top: 20px;
+    }
+    p, li { color: var(--text); }
+    .tldr {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--card);
+    }
+    ul { padding-left: 24px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 32px;
+      text-align: center;
+    }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 48px 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ders Saatim</h1>
+      <div class="subtitle">Gizlilik Politikası</div>
+      <div class="subtitle">Yürürlük: 14 Nisan 2026</div>
+    </header>
+
+    <div class="tldr">
+      <strong>Özet:</strong> Ders Saatim hiçbir kişisel verinizi toplamaz, sunucuya göndermez, üçüncü taraflarla paylaşmaz. Tüm çalışma kayıtlarınız, notlarınız ve ayarlarınız sadece kendi telefonunuzda saklanır.
+    </div>
+
+    <h2>1. Kimiz?</h2>
+    <p>Ders Saatim, <strong>DavedDeva</strong> tarafından geliştirilen bir ders çalışma sayacı uygulamasıdır. Öğrencilerin odaklanma sürelerini takip etmelerine yardımcı olmak için tasarlanmıştır.</p>
+
+    <h2>2. Toplanan Veriler</h2>
+    <p><strong>Hiçbir veri sunucuya gönderilmez.</strong> Uygulama tamamen çevrimdışı çalışır.</p>
+    <p>Telefonunuzda <strong>yerel olarak</strong> aşağıdaki veriler saklanır:</p>
+    <ul>
+      <li>Çalışma oturumlarınız (süre, ders adı, tarih, varsa aldığınız notlar)</li>
+      <li>Tema ve ayar tercihleriniz</li>
+      <li>Motivasyon sözü geçmişi (tekrar göstermemek için)</li>
+    </ul>
+    <p>Bu verilerin <strong>hiçbiri internete yüklenmez, analiz edilmez, paylaşılmaz</strong>.</p>
+
+    <h2>3. İstenen İzinler ve Nedenleri</h2>
+    <table>
+      <thead>
+        <tr><th>İzin</th><th>Neden</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bildirim</strong></td>
+          <td>Sayaç arka planda çalışırken ilerleme göstermek ve pomodoro bitiminde uyarmak için</td>
+        </tr>
+        <tr>
+          <td><strong>Rahatsız Etmeyin</strong></td>
+          <td>Opsiyonel. Ayarlardan etkinleştirirseniz sayaç başlayınca bildirimleri sessize alır, bitince geri açar</td>
+        </tr>
+        <tr>
+          <td><strong>Wake Lock</strong></td>
+          <td>Yatay sayaç açıkken ekranın kapanmaması için</td>
+        </tr>
+        <tr>
+          <td><strong>Foreground Service</strong></td>
+          <td>Samsung, Xiaomi gibi cihazlarda sayacın arka planda güvenilir çalışması için</td>
+        </tr>
+        <tr>
+          <td><strong>Batarya Optimizasyonu</strong></td>
+          <td>Opsiyonel. Uzun oturumlarda sistemin sayacı öldürmesini engellemek için</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Üçüncü Taraf Hizmetler</h2>
+    <p><strong>Kullanılmıyor.</strong></p>
+    <ul>
+      <li>Reklam yok</li>
+      <li>Analitik (Firebase, Google Analytics, Mixpanel vb.) yok</li>
+      <li>Hata izleme (Crashlytics, Sentry vb.) yok</li>
+      <li>Sosyal medya entegrasyonu yok</li>
+    </ul>
+    <p>Paylaşım kartı özelliğini kullandığınızda, uygulama telefonunuzun sistem paylaşım menüsünü açar. Seçtiğiniz uygulamaya veriyi <strong>siz</strong> aktarırsınız; Ders Saatim bu aktarımda yer almaz.</p>
+
+    <h2>5. Çocukların Gizliliği</h2>
+    <p>Ders Saatim eğitim amaçlı bir uygulamadır ve her yaştan öğrenci tarafından kullanılabilir. Hiçbir kullanıcıdan kişisel bilgi toplanmadığı için çocukların verisi ayrıca işlenmez.</p>
+
+    <h2>6. Veri Silme</h2>
+    <p>Verilerinizi silmek için uygulamayı telefonunuzdan kaldırmanız yeterlidir. Tüm yerel veriler (oturum geçmişi, ayarlar) telefonla birlikte silinir. Sunucu tarafında tutulan veri olmadığı için başka bir işlem gerekmez.</p>
+
+    <h2>7. Değişiklikler</h2>
+    <p>Bu politikada değişiklik yaparsak, uygulama içinden veya bu sayfadan duyururuz. Güncel sürüm her zaman bu adreste bulunur.</p>
+
+    <div class="contact">
+      <h3 style="margin-top: 0;">İletişim</h3>
+      <p style="margin: 8px 0;">Sorularınız için:</p>
+      <p style="margin: 8px 0;"><a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>English Summary</h2>
+    <p><strong>My Study Clock does not collect, store, or share any personal data with any server.</strong> All study records, notes, and settings are stored locally on your device only. No ads, no analytics, no tracking. The application works fully offline. For questions, contact <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>.</p>
+
+    <footer>
+      © 2026 DavedDeva · Ders Saatim
+    </footer>
+  </div>
+</body>
+</html>
