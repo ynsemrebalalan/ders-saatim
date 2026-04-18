@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gizlilik Politikası — Ders Saatim</title>
-  <meta name="description" content="Ders Saatim gizlilik politikası. Hiçbir kişisel veri toplanmaz, paylaşılmaz.">
+  <meta name="description" content="Ders Saatim gizlilik politikası. Temel ozellikler cevrimdisi calisir; opsiyonel hesap acarsaniz e-posta ve kullanici kimliginiz Supabase uzerinde saklanir.">
   <style>
     :root {
       --bg: #0a0a0a;
@@ -109,27 +109,70 @@
     <header>
       <h1>Ders Saatim</h1>
       <div class="subtitle">Gizlilik Politikası</div>
-      <div class="subtitle">Yürürlük: 14 Nisan 2026</div>
+      <div class="subtitle">Yürürlük: 18 Nisan 2026</div>
     </header>
 
     <div class="tldr">
-      <strong>Özet:</strong> Ders Saatim hiçbir kişisel verinizi toplamaz, sunucuya göndermez, üçüncü taraflarla paylaşmaz. Tüm çalışma kayıtlarınız, notlarınız ve ayarlarınız sadece kendi telefonunuzda saklanır.
+      <strong>Özet:</strong> Ders Saatim'in temel özellikleri (sayaç, notlar, istatistikler) tamamen çevrimdışı çalışır ve kişisel verinizi sunucuya göndermez. Yalnızca <strong>opsiyonel</strong> hesap oluşturduğunuzda e-posta adresiniz ve bir kullanıcı kimliği Supabase sunucusunda tutulur; bu da sadece cihazlar arası senkronizasyon ve Pro üyelik durumu içindir. Hesabınızı uygulama içinden kalıcı olarak silebilirsiniz.
     </div>
 
     <h2>1. Kimiz?</h2>
     <p>Ders Saatim, <strong>DavedDeva</strong> tarafından geliştirilen bir ders çalışma sayacı uygulamasıdır. Öğrencilerin odaklanma sürelerini takip etmelerine yardımcı olmak için tasarlanmıştır.</p>
 
     <h2>2. Toplanan Veriler</h2>
-    <p><strong>Hiçbir veri sunucuya gönderilmez.</strong> Uygulama tamamen çevrimdışı çalışır.</p>
-    <p>Telefonunuzda <strong>yerel olarak</strong> aşağıdaki veriler saklanır:</p>
-    <ul>
-      <li>Çalışma oturumlarınız (süre, ders adı, tarih, varsa aldığınız notlar)</li>
-      <li>Tema ve ayar tercihleriniz</li>
-      <li>Motivasyon sözü geçmişi (tekrar göstermemek için)</li>
-    </ul>
-    <p>Bu verilerin <strong>hiçbiri internete yüklenmez, analiz edilmez, paylaşılmaz</strong>.</p>
 
-    <h2>3. İstenen İzinler ve Nedenleri</h2>
+    <h3>2.1 Yerel (cihazınızda kalan) veriler</h3>
+    <p>Aşağıdaki veriler <strong>yalnızca cihazınızda</strong> SQLite ve SharedPreferences içinde saklanır; internete gönderilmez:</p>
+    <ul>
+      <li>Çalışma oturumlarınız (süre, ders adı, tarih, opsiyonel notlar)</li>
+      <li>Tema, dil, pomodoro ayarları ve tercihleriniz</li>
+      <li>Kazanılan rozetler ve gösterilmiş motivasyon sözü geçmişi</li>
+      <li>Sınav profili (YKS/LGS/KPSS vb.) ve hedef tarihi</li>
+    </ul>
+    <p>Uygulamayı kaldırdığınızda bu veriler telefonla birlikte silinir.</p>
+
+    <h3>2.2 Hesap oluşturursanız sunucuda tutulan veriler (opsiyonel)</h3>
+    <p>Uygulama içinden bir hesap oluşturmayı tercih ederseniz aşağıdaki bilgiler <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a> altyapısında saklanır:</p>
+    <ul>
+      <li><strong>E-posta adresiniz</strong> (giriş ve şifre sıfırlama için)</li>
+      <li><strong>Şifreniz</strong> (tek yönlü hash olarak; düz metin kaydedilmez)</li>
+      <li><strong>Benzersiz kullanıcı kimliği (UUID)</strong> ve hesap oluşturma tarihi</li>
+      <li><strong>Pro üyelik durumu</strong> (gelecekte aktif olacak)</li>
+    </ul>
+    <p>Çalışma oturumlarınız, notlarınız ve istatistikleriniz şu anda sunucuya gönderilmez; yalnızca cihazınızda kalır.</p>
+
+    <h3>2.3 Toplanmayan veriler</h3>
+    <p>Şu verileri <strong>hiçbir zaman toplamıyoruz</strong>:</p>
+    <ul>
+      <li>Ad, soyad, doğum tarihi, telefon numarası</li>
+      <li>Konum, kamera, mikrofon, rehber, galeri</li>
+      <li>IDFA, IDFV veya başka reklam kimlikleri (takip amaçlı)</li>
+      <li>Kullanıcı davranışı ile kişilere özgü reklam profili</li>
+    </ul>
+
+    <h2>3. Veri Kullanım Amacı</h2>
+    <table>
+      <thead>
+        <tr><th>Veri</th><th>Amaç</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>E-posta + şifre</td>
+          <td>Hesabınıza güvenli erişim ve şifre sıfırlama</td>
+        </tr>
+        <tr>
+          <td>Kullanıcı kimliği (UUID)</td>
+          <td>Cihazlar arası oturum devamlılığı, Pro durumu doğrulama</td>
+        </tr>
+        <tr>
+          <td>Pro üyelik durumu</td>
+          <td>Premium temaların kilidini açma (gelecek sürüm)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Verileriniz <strong>hiçbir üçüncü tarafa satılmaz, paylaşılmaz, reklam için kullanılmaz</strong>.</p>
+
+    <h2>4. İstenen İzinler ve Nedenleri</h2>
     <table>
       <thead>
         <tr><th>İzin</th><th>Neden</th></tr>
@@ -140,53 +183,87 @@
           <td>Sayaç arka planda çalışırken ilerleme göstermek ve pomodoro bitiminde uyarmak için</td>
         </tr>
         <tr>
-          <td><strong>Rahatsız Etmeyin</strong></td>
-          <td>Opsiyonel. Ayarlardan etkinleştirirseniz sayaç başlayınca bildirimleri sessize alır, bitince geri açar</td>
+          <td><strong>Fotoğraf Kitaplığına Ekleme (iOS)</strong></td>
+          <td>Paylaşım kartını telefonunuzun galerisine kaydetmek için</td>
         </tr>
         <tr>
-          <td><strong>Wake Lock</strong></td>
+          <td><strong>Rahatsız Etmeyin (Android)</strong></td>
+          <td>Opsiyonel. Ayarlardan açarsanız sayaç başlayınca bildirimleri sessize alır, bitince geri açar. iOS'ta Apple izni olmadığı için Kısayollar ile otomasyon kurulması önerilir</td>
+        </tr>
+        <tr>
+          <td><strong>Wake Lock / Ekranı Açık Tutma</strong></td>
           <td>Yatay sayaç açıkken ekranın kapanmaması için</td>
         </tr>
         <tr>
-          <td><strong>Foreground Service</strong></td>
+          <td><strong>Foreground Service (Android)</strong></td>
           <td>Samsung, Xiaomi gibi cihazlarda sayacın arka planda güvenilir çalışması için</td>
         </tr>
         <tr>
-          <td><strong>Batarya Optimizasyonu</strong></td>
-          <td>Opsiyonel. Uzun oturumlarda sistemin sayacı öldürmesini engellemek için</td>
+          <td><strong>İnternet Erişimi</strong></td>
+          <td>Sadece hesap giriş/kayıt ve Supabase senkronizasyonu için. Temel sayaç çevrimdışı çalışır</td>
         </tr>
       </tbody>
     </table>
 
-    <h2>4. Üçüncü Taraf Hizmetler</h2>
-    <p><strong>Kullanılmıyor.</strong></p>
+    <h2>5. Üçüncü Taraf Hizmetler</h2>
+    <p>Yalnızca aşağıdaki hizmetler kullanılır ve yalnızca işlev için gerekli olan asgari veri paylaşılır:</p>
     <ul>
-      <li>Reklam yok</li>
-      <li>Analitik (Firebase, Google Analytics, Mixpanel vb.) yok</li>
-      <li>Hata izleme (Crashlytics, Sentry vb.) yok</li>
-      <li>Sosyal medya entegrasyonu yok</li>
+      <li><strong>Supabase</strong> — kimlik doğrulama (e-posta/şifre) ve kullanıcı profil kaydı. Veriler AB/ABD üzerindeki Supabase sunucularında <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase gizlilik politikası</a> çerçevesinde saklanır.</li>
+    </ul>
+    <p>Şunlar <strong>kullanılmıyor</strong>:</p>
+    <ul>
+      <li>Reklam ağları (AdMob, Facebook Ads vb.)</li>
+      <li>Analitik (Firebase, Google Analytics, Mixpanel vb.)</li>
+      <li>Hata izleme (Crashlytics, Sentry vb.)</li>
+      <li>Sosyal medya SDK'ları</li>
     </ul>
     <p>Paylaşım kartı özelliğini kullandığınızda, uygulama telefonunuzun sistem paylaşım menüsünü açar. Seçtiğiniz uygulamaya veriyi <strong>siz</strong> aktarırsınız; Ders Saatim bu aktarımda yer almaz.</p>
 
-    <h2>5. Çocukların Gizliliği</h2>
-    <p>Ders Saatim eğitim amaçlı bir uygulamadır ve her yaştan öğrenci tarafından kullanılabilir. Hiçbir kullanıcıdan kişisel bilgi toplanmadığı için çocukların verisi ayrıca işlenmez.</p>
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Ders Saatim eğitim amaçlı bir uygulamadır ve her yaştan öğrenci tarafından kullanılabilir. Yaş doğrulaması yapmıyoruz. 13 yaş altı çocukların ebeveyn onayı olmadan hesap oluşturmamasını öneriyoruz. 13 yaş altı bir çocuğun hesap oluşturduğunu öğrenirsek, 30 gün içinde ilgili hesabı sileriz. Bu durumu bize <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a> adresinden bildirebilirsiniz.</p>
 
-    <h2>6. Veri Silme</h2>
-    <p>Verilerinizi silmek için uygulamayı telefonunuzdan kaldırmanız yeterlidir. Tüm yerel veriler (oturum geçmişi, ayarlar) telefonla birlikte silinir. Sunucu tarafında tutulan veri olmadığı için başka bir işlem gerekmez.</p>
+    <h2>7. Veri Silme ve Hesap Silme</h2>
+    <h3>Yerel verileri silme</h3>
+    <p>Uygulamayı telefonunuzdan kaldırdığınızda tüm yerel veriler (oturum geçmişi, notlar, ayarlar) cihazla birlikte silinir.</p>
 
-    <h2>7. Değişiklikler</h2>
-    <p>Bu politikada değişiklik yaparsak, uygulama içinden veya bu sayfadan duyururuz. Güncel sürüm her zaman bu adreste bulunur.</p>
+    <h3>Sunucu hesabını silme</h3>
+    <p>Hesabınızı ve sunucuda tutulan tüm verileri <strong>uygulama içinden kalıcı olarak silebilirsiniz</strong>:</p>
+    <ol>
+      <li>Uygulamayı açın</li>
+      <li><strong>Ayarlar &rarr; Hesabım</strong> menüsüne girin</li>
+      <li>Alt taraftaki <strong>"Hesabı sil"</strong> butonuna dokunun</li>
+      <li>Onay ekranında <strong>"Hesabı sil"</strong> butonuna tekrar dokunun</li>
+    </ol>
+    <p>Bu işlem anında gerçekleşir; Supabase üzerindeki hesabınız ve profil kaydınız kalıcı olarak silinir, geri alınamaz.</p>
+    <p>Alternatif olarak silmek için e-posta ile başvurabilirsiniz: <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>. 30 gün içinde hesabınız silinir.</p>
+
+    <h2>8. Veri Güvenliği</h2>
+    <p>Sunucuya giden tüm trafik TLS (HTTPS) üzerinden şifrelenir. Şifreler geri döndürülemez hash olarak saklanır. Supabase altyapısı SOC 2 ve GDPR uyumludur. Bir veri ihlali olursa sizi en geç 72 saat içinde bilgilendiririz.</p>
+
+    <h2>9. Haklarınız (GDPR / KVKK)</h2>
+    <p>Avrupa Birliği (GDPR) ve Türkiye (KVKK) veri koruma mevzuatı kapsamında aşağıdaki haklara sahipsiniz:</p>
+    <ul>
+      <li><strong>Erişim hakkı:</strong> Sizinle ilgili hangi verilerin tutulduğunu öğrenme</li>
+      <li><strong>Düzeltme hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini isteme</li>
+      <li><strong>Silme hakkı:</strong> Verilerinizin silinmesini talep etme (yukarıdaki 7. madde)</li>
+      <li><strong>İtiraz hakkı:</strong> İşleme itiraz etme</li>
+      <li><strong>Taşıma hakkı:</strong> Verilerinizin makine okunur formatta size verilmesi</li>
+    </ul>
+    <p>Haklarınızı kullanmak için <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a> adresine yazabilirsiniz.</p>
+
+    <h2>10. Değişiklikler</h2>
+    <p>Bu politikada değişiklik yaparsak, uygulama içinden veya bu sayfadan duyururuz. Güncel sürüm her zaman bu adreste bulunur. Önemli değişikliklerde uygulamayı bir sonraki açışınızda size özel bir bildirim göstereceğiz.</p>
 
     <div class="contact">
       <h3 style="margin-top: 0;">İletişim</h3>
-      <p style="margin: 8px 0;">Sorularınız için:</p>
+      <p style="margin: 8px 0;">Sorularınız, veri silme talepleri, diğer gizlilik konuları için:</p>
       <p style="margin: 8px 0;"><a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a></p>
     </div>
 
     <div class="divider"></div>
 
     <h2>English Summary</h2>
-    <p><strong>My Study Clock does not collect, store, or share any personal data with any server.</strong> All study records, notes, and settings are stored locally on your device only. No ads, no analytics, no tracking. The application works fully offline. For questions, contact <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>.</p>
+    <p>Ders Saatim's core features (timer, notes, statistics) run fully offline and do not send personal data to any server. If you <strong>optionally</strong> create an account, your email address, hashed password, a unique user ID and Pro status are stored on Supabase servers, used solely for authentication and device sync. No analytics, ads, or tracking. Study sessions, notes and statistics are <strong>never</strong> sent to the server — they stay on your device. You can permanently delete your account from within the app: <strong>Settings &rarr; Account &rarr; Delete Account</strong>. For data requests, contact <a href="mailto:yunusemrebalalan@gmail.com">yunusemrebalalan@gmail.com</a>.</p>
 
     <footer>
       © 2026 DavedDeva · Ders Saatim
